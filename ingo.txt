@@ -1,1 +1,11 @@
 Hii my name is shreesha  Aatreya . I have completed my +2 Education from Millennium Secondary School Tansen Palpa.
+
+
+git branch - To check all branch 
+git branch branchname - to create new branch
+git checkout branchname - to switch into specific branch
+
+
+git add .
+git commit -m "commit message"
+git push origin branchname
