@@ -1,0 +1,193 @@
+@import "_herosection.scss";
+
+
+.homepageWrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebarWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  &-content {
+    position: relative;
+    &-image {
+      height: 210px;
+      width: 210px;
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-name {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background-color: yellow;
+      & p {
+        text-align: center;
+        margin-bottom: 0.625rem;
+        margin-top: 0.625rem;
+        font-weight: 400;
+        font-family: "Poppins", sans-serif;
+      }
+    }
+  }
+  &-menu{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #151931;
+    height: 100%;
+    & ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        & li{
+            color: #e2e1f1 ;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+            &:hover{
+                color: yellow !important;
+            }
+            & a{
+                text-decoration: none;
+                  color: #e2e1f1 ;
+                  &:hover{
+                    color: yellow !important;
+                  }
+            }
+        }
+    }
+  }
+
+}
+
+
+.bodyWrapper{
+      width: 100vw;
+      
+    &-herosection{
+      background-image: url('https://rxdtheme.com/html/themetum/wokoya/new-sidebar/img/header-bg.jpg');
+      background-size: cover;
+      height: 100vh;
+      width: 100%;
+
+      .herosectionOverlay{
+        background-color: rgba(21, 25, 49,0.5);
+        // opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        padding-left: 24px;
+      }
+
+      .headerContent{
+        position: relative;
+        &-contactinfo{
+            display: flex;
+            gap: 60px;
+            & p{
+                color:#d9d8e7 !important;
+                font-size: 1.125rem;
+                padding-top:1.2rem;
+                font-weight: 600;
+            }
+        }
+        &-mailIcon{
+            background-color: yellow;
+            padding: 8px;
+            color: rgb(21, 25, 49);
+            height: 60px;
+            width: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            position:absolute ;
+            top: 0;
+            right: 0;
+        }
+      }
+     
+     
+    }
+    margin-left: 210px;
+}
+
+.buttonWrapper{
+    display: flex;
+    justify-content: center;}
+
+.button{
+    
+ padding: 12px 30px;
+ background-color: #F9CA21;
+ color: #151931;
+ border-radius: 8px;
+ border: none;
+ font-size: 16px;
+ font-weight: 500;
+ transition: all 0.5s ease;
+ &:hover{
+    // padding: 12px 40px;
+    box-shadow: 4px 7px 10px 2px #1e196c;
+    padding-right: 40px;
+    padding-left: 40px;
+ } 
+}
+
+.borderWrapper{
+    border-left: 2px solid #F9CA21;
+    height: 200px;
+    border-radius: 2px;
+    position: relative;
+    display: flex;
+
+    // flex-direction: column;
+    // padding: 20px 0px;
+    // gap: 50px; 
+    // justify-content: space-around;
+
+    // gap: 50px;
+    &-point{
+        position: absolute;
+        left: -5px;
+        height: 10px;
+        width: 10px;
+        background-color: red;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-innerpoint{
+            height: 4px;
+            width: 4px;
+            background-color: yellow;
+            border-radius: 2px;
+         
+        }
+
+    }
+    &-point1{
+        @extend .borderWrapper-point;
+        top: 50px;
+        // padding: 50px 0px;
+
+
+    }
+    &-point2{
+        @extend .borderWrapper-point;
+        top: 100px;
+    }
+    &-point3{
+        @extend .borderWrapper-point;
+        top: 150px;
+    }
+}
