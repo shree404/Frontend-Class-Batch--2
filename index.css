@@ -152,7 +152,7 @@
 
 .button {
   padding: 12px 30px;
-  background-color: #F9CA21;
+  background-color: #f9ca21;
   color: #151931;
   border-radius: 8px;
   border: none;
@@ -167,7 +167,7 @@
 }
 
 .borderWrapper {
-  border-left: 2px solid #F9CA21;
+  border-left: 2px solid #f9ca21;
   height: 200px;
   border-radius: 2px;
   position: relative;
@@ -198,4 +198,137 @@
 }
 .borderWrapper-point3 {
   top: 150px;
+}
+
+.imageContainer {
+  height: 300px;
+  width: 200px;
+  cursor: pointer;
+  position: relative;
+}
+.imageContainer-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.imageContainer-image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.imageContainer-content {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  padding-left: 10px;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
+.imageContainer-content div {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.imageContainer-content p {
+  color: yellow !important;
+  font-size: 18px;
+  font-weight: 600;
+}
+.imageContainer:hover .hoverimage {
+  transform: scale(1.1);
+  transition: all 0.5s ease-in-out;
+  border: none;
+}
+.imageContainer:hover .imageContainer-content {
+  display: block;
+}
+
+.serviceCardWrapper {
+  background-color: white;
+  width: 33%;
+  height: 200px;
+  margin-top: 30px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+.serviceCardWrapper-inside {
+  transition: all 0.5s ease-in-out;
+  background-color: yellow;
+  width: 0%;
+  height: 100%;
+}
+.serviceCardWrapper-content {
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.serviceCardWrapper-content .insider {
+  padding: 20px 15px;
+}
+.serviceCardWrapper-content-icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: #d9d8e7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.serviceCardWrapper-content h4 {
+  color: #151931;
+  font-size: 1.25rem;
+}
+.serviceCardWrapper-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.serviceCardWrapper-content ul li {
+  color: #151931;
+}
+.serviceCardWrapper:hover .serviceCardWrapper-inside {
+  width: 100%;
+}
+.serviceCardWrapper:hover .serviceCardWrapper-content-icon {
+  background-color: white;
+}
+.serviceCardWrapper:hover .serviceCardWrapper-circleTwo {
+  display: none;
+}
+.serviceCardWrapper:hover .serviceCardWrapper-circleOne {
+  display: none;
+}
+.serviceCardWrapper-circleOne {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: yellow;
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+}
+.serviceCardWrapper-circleTwo {
+  height: 15px;
+  width: 15px;
+  border-radius: 7.5px;
+  background-color: #f9ca21;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  z-index: 2;
 }/*# sourceMappingURL=index.css.map */
